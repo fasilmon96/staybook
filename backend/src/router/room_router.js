@@ -5,7 +5,7 @@ import { createRoom, deleteRoom, getAllRooms, getSingleRoom, updateRoom } from '
 
 const router = express.Router();
 
-app.use(protectRoute);
+router.use(protectRoute);
 
 
 router.post("/create", adminRoute, createRoom);

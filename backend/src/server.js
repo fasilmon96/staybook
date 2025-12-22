@@ -3,7 +3,7 @@ import "dotenv/config.js";
 import { ENV } from "./lib/env.js";
 import cookieParser from 'cookie-parser';
 import AuthRouter from "./router/auth_router.js";
-import Roomrouter from "./router/room_router.js";
+import RoomRouter from "./router/room_router.js";
 import cors from 'cors';
 import { ConnectDB } from "./lib/db.js";
 
@@ -18,7 +18,8 @@ app.use(cookieParser());
 
 
 app.use("/api/auth" , AuthRouter);
-app.use("/api/room" , Roomrouter);
+app.use("/api/room" , RoomRouter);
+app.use("/api/booking" , BookingRouter)
 
 
 
